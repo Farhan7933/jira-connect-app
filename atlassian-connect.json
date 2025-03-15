@@ -1,0 +1,56 @@
+{
+    "key": "orgsignals-jira",
+    "name": "OrgSignals-Jira",
+    "description": "Provides Engineering Insights",
+    "vendor": {
+        "name": "OrgSignals",
+        "url": "https://www.orgsignals.ai"
+    },
+    "baseUrl": "https://e249-192-140-152-51.ngrok-free.app/events/jira",
+    "authentication": {
+        "type": "jwt"
+    },
+    "lifecycle": {
+        "installed": "/installed",
+        "uninstalled": "/uninstalled",
+        "disabled": "/disabled",
+        "enabled": "/enabled"
+    },
+    "apiMigrations": {
+        "gdpr": true,
+        "signed-install": true
+    },
+    "modules": {
+        "webhooks": [
+            { "event": "jira:issue_created", "url": "/webhook" },
+            { "event": "jira:issue_deleted", "url": "/webhook" },
+            { "event": "jira:issue_updated", "url": "/webhook" },
+            { "event": "connect_addon_disabled", "url": "/webhook" },
+            { "event": "connect_addon_enabled", "url": "/webhook" },
+            { "event": "issuelink_created", "url": "/webhook" },
+            { "event": "issuelink_deleted", "url": "/webhook" },
+            { "event": "issue_property_set", "url": "/webhook" },
+            { "event": "issue_property_deleted", "url": "/webhook" },
+            { "event": "issuetype_created", "url": "/webhook" },
+            { "event": "issuetype_updated", "url": "/webhook" },
+            { "event": "issuetype_deleted", "url": "/webhook" },
+            { "event": "attachment_created", "url": "/webhook" },
+            { "event": "attachment_deleted", "url": "/webhook" },
+            { "event": "project_created", "url": "/webhook" },
+            { "event": "project_updated", "url": "/webhook" },
+            { "event": "project_deleted", "url": "/webhook" },
+            { "event": "project_app_enabled", "url": "/webhook" },
+            { "event": "project_app_disabled", "url": "/webhook" },
+            { "event": "user_created", "url": "/webhook" },
+            { "event": "user_deleted", "url": "/webhook" },
+            { "event": "user_updated", "url": "/webhook" },
+            { "event": "comment_created", "url": "/webhook" },
+            { "event": "comment_updated", "url": "/webhook" },
+            { "event": "comment_deleted", "url": "/webhook" },
+            { "event": "worklog_created", "url": "/webhook" },
+            { "event": "worklog_updated", "url": "/webhook" },
+            { "event": "worklog_deleted", "url": "/webhook" }
+        ]
+    },
+    "scopes": ["read", "write", "act_as_user", "ACCESS_EMAIL_ADDRESSES"]
+}
