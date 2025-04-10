@@ -6,7 +6,7 @@
         "name": "OrgSignals",
         "url": "https://www.orgsignals.ai"
     },
-    "baseUrl": "https://0acf-192-140-152-110.ngrok-free.app/events/jira",
+    "baseUrl": "https://a81f-192-140-152-13.ngrok-free.app/events/jira",
     "authentication": {
         "type": "jwt"
     },
